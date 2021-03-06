@@ -5,14 +5,14 @@ files:
     destination: /var/www/html/
 hooks:
   BeforeInstall:
-    - location: solid-journey/install_webserver.sh
+    - location: install_webserver.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: solid-journey/start_app.sh
+    - location: start_app.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: solid-journey/stop_app.sh
+    - location: stop_app.sh
       timeout: 300
       runas: root
